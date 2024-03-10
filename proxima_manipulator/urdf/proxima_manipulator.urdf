@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="proxima_manipulator">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="2.5258402656484E-17 -7.66842226908882E-17 0.0290208692675547"
+        rpy="0 0 0" />
+      <mass
+        value="0.247721059115889" />
+      <inertia
+        ixx="0.0003011867427044"
+        ixy="2.05830182972313E-20"
+        ixz="2.47621372524941E-20"
+        iyy="0.0003011867427044"
+        iyz="-1.96127207461358E-19"
+        izz="0.000467545439957378" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="0.000679383765083395 0.0548526398535723 -2.3768793279131E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.299442623727157" />
+      <inertia
+        ixx="0.000485698773883558"
+        ixy="-7.01102822877796E-06"
+        ixz="-8.72574148242731E-10"
+        iyy="0.000369014762438299"
+        iyz="1.69735479817694E-10"
+        izz="0.000424724644713757" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.052137"
+      rpy="1.5708 0 1.5385" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="6.28"
+      effort="300"
+      velocity="3" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="0.050597140893502 0.317685319191882 0.00338527588810221"
+        rpy="0 0 0" />
+      <mass
+        value="0.431675804986954" />
+      <inertia
+        ixx="0.00212485997772942"
+        ixy="4.92746627125594E-06"
+        ixz="5.11499603265545E-06"
+        iyy="0.00017848011321194"
+        iyz="1.396088846447E-06"
+        izz="0.00203639391469199" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="0 0.0950000000000002 0"
+      rpy="3.11920106161477 -0.0584069807270765 -3.14028535401375" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="-0.99829394408228 0 -0.0583883653534411" />
+    <limit
+      lower="-1.6"
+      upper="1.6"
+      effort="200"
+      velocity="3" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="-0.00985412688205162 0.00581004391562301 0.178575211649324"
+        rpy="0 0 0" />
+      <mass
+        value="0.280632653657222" />
+      <inertia
+        ixx="0.000444049965086898"
+        ixy="4.59149600846214E-07"
+        ixz="2.36461103156913E-05"
+        iyy="0.000410211013806783"
+        iyz="-6.76634984758777E-06"
+        izz="9.90246968945817E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="-7.87703295446214E-05 0.614389000141173 0.00134677418149688"
+      rpy="0.0223152609114132 -1.45620991984797E-05 0.00130507036394283" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0.998293944082279 0 0.0583883653534387" />
+    <limit
+      lower="-4.3"
+      upper="1.2"
+      effort="200"
+      velocity="3" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="0.0301290383281838 -0.022624242385202 0.0017034441674571"
+        rpy="0 0 0" />
+      <mass
+        value="0.101723006190532" />
+      <inertia
+        ixx="5.32387818316443E-05"
+        ixy="-2.14331810138912E-07"
+        ixz="-6.30723833289978E-07"
+        iyy="5.04859372146092E-05"
+        iyz="-1.42626306207329E-07"
+        izz="6.39658108033768E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="revolute">
+    <origin
+      xyz="-0.00132044807338457 0.00819533769298764 0.372225791798846"
+      rpy="-0.0298981332384568 4.4048526031649E-05 -0.00174947259189244" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="0.99828701476073 -0.000894175230800016 0.0584998855619884" />
+    <limit
+      lower="-4"
+      upper="0"
+      effort="200"
+      velocity="3" />
+  </joint>
+  <link
+    name="link_5">
+    <inertial>
+      <origin
+        xyz="0.00467171554770146 -0.0233217337591671 0.000155069988300116"
+        rpy="0 0 0" />
+      <mass
+        value="0.0113820940104625" />
+      <inertia
+        ixx="2.03514310874647E-06"
+        ixy="-2.24606683921887E-09"
+        ixz="3.39087865597806E-09"
+        iyy="1.07850848949512E-06"
+        iyz="1.47897723382928E-09"
+        izz="1.07127334368503E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_5"
+    type="revolute">
+    <origin
+      xyz="0.025875008104187 -0.0580199138792445 0.00191212380063072"
+      rpy="-0.00152287370303111 -0.575402774361386 0.000450566298362034" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="-0.00234790332289659 -0.999997243671188 0" />
+    <limit
+      lower="-6.28"
+      upper="0"
+      effort="200"
+      velocity="3" />
+  </joint>
+  <link
+    name="link_6">
+    <inertial>
+      <origin
+        xyz="1.99840144432528E-15 -0.00194502546340572 -0.00268340410718959"
+        rpy="0 0 0" />
+      <mass
+        value="0.000240771357022718" />
+      <inertia
+        ixx="6.71162139621469E-09"
+        ixy="-5.16987882845642E-24"
+        ixz="-1.27696007062874E-23"
+        iyy="7.17265614180493E-09"
+        iyz="-7.80721609478609E-10"
+        izz="1.4051672262156E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_6"
+    type="revolute">
+    <origin
+      xyz="0.0197853931580041 -0.0260875237714602 -0.00520610962214785"
+      rpy="0 -1.43801414949344 1.56844841787987" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_6" />
+    <axis
+      xyz="0.000310844865866911 -0.999997243671193 -0.00232723558859007" />
+    <limit
+      lower="0"
+      upper="1.4"
+      effort="200"
+      velocity="3" />
+  </joint>
+</robot>
